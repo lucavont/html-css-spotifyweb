@@ -22,7 +22,7 @@ main::after {
   height: calc(100% - 100px);
   background-color: black;
   float: left;
-  overflow-y: auto;
+  position: relative;
 }
 
 #sidebar p,
@@ -31,9 +31,9 @@ main::after {
   color: #565656;
 }
 .sidebar-head {
-  margin-left: 20px;
+  min-height: 500px;
+  height: calc(100% - 80px);
 }
-
 .sidebar-logo {
   display: flex;
   align-items: center;
@@ -43,11 +43,13 @@ main::after {
 
 .sidebar-logo img {
   width: 150px;
+  margin-left: 20px;
 }
 
 .sidebar-menu img {
   width: 30px;
   vertical-align: middle;
+  margin-left: 20px;
 }
 
 .sidebar-menu p {
@@ -61,8 +63,13 @@ main::after {
   line-height: 40px;
 }
 
+.home {
+  border-left: 2px solid #ADFF2F;
+}
+
 .sidebar-playlist {
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 .sidebar-playlist h3 {
@@ -92,16 +99,63 @@ main::after {
   transform: translate(-50%, -50%);
 }
 
+.playlist-list {
+  overflow-y: auto;
+  height: 30%;
+}
+
 .playlist-list ul {
   color: white;
   list-style: none;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
 .playlist-list li {
   margin-top: 10px;
 }
 
+.sidebar-bottom {
+  height: 80px;
+  margin-left: 20px;
+}
+
+.sidebar-bottom img {
+  display: inline;
+  width: 15px;
+  vertical-align: middle;
+}
+
+.sidebar-bottom p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sidebar-bottom hr {
+  margin: 10px 0px;
+  width: 250px;
+}
+
+.sidebar-bottom h3 {
+  display: inline-block;
+  color: white;
+}
+.sidebar-bottom .profile {
+
+}
+.sidebar-bottom .profile img {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+.profile-img {
+  display: inline-block;
+  background-color: gray;
+  border-radius: 50px;
+  overflow: hidden;
+  vertical-align: middle;
+}
 #scrolling-content {
   width: calc(100% - 300px);
   height: calc(100% - 100px);
@@ -134,6 +188,73 @@ main::after {
   margin-right: 20px;
 }
 
+.navigation {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.navigation h4 {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0px 10px;
+  position: relative;
+}
+
+.navigation h4:first-child::before {
+  content : "";
+  position: absolute;
+  left    : 50%;
+  transform: translate(-50%);
+  bottom: -10%;
+  width   : 50%;
+  border-bottom: 2px solid #ADFF2F;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: gray;
+}
+
+.recently-played {
+  margin-top: 40px;
+}
+
+.recently-played h1 {
+  color: white;
+}
+
+.img1 h3,
+.img2 h3,
+.img3 h3,
+.img4 h3,
+.img5 h3,
+.img6 h3 {
+  color: white;
+}
+
+.img1 p,
+.img2 p,
+.img3 p,
+.img4 p,
+.img5 p,
+.img6 p {
+  color: gray;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6 {
+  display: inline-block;
+  margin-left: 10px;
+  width: 200px;
+}
+.recently-played img {
+  width: 200px;
+  margin-top: 20px;
+}
 
 #music-player {
   width: 100%;
