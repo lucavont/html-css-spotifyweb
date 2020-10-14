@@ -215,12 +215,23 @@ main::after {
   color: gray;
 }
 
-.recently-played {
+.recently-played,
+.created-for,
+.recent-artists {
   margin-top: 40px;
 }
 
-.recently-played h1 {
+.recently-played h1,
+.created-for h1,
+.recent-artists h1 {
   color: white;
+  margin-left: 10px;
+}
+
+.created-for p,
+.recent-artists p {
+  margin-left: 10px;
+  color: gray;
 }
 
 .img1 h3,
@@ -228,7 +239,14 @@ main::after {
 .img3 h3,
 .img4 h3,
 .img5 h3,
-.img6 h3 {
+.img6 h3,
+/* recently played */
+.img7 h3,
+.img8 h3,
+/* artisti piu popolari */
+.img9 h3,
+.img10 h3,
+.bottom-left-box h4 {
   color: white;
 }
 
@@ -237,7 +255,8 @@ main::after {
 .img3 p,
 .img4 p,
 .img5 p,
-.img6 p {
+.img6 p,
+.bottom-left-box p {
   color: gray;
 }
 
@@ -246,14 +265,33 @@ main::after {
 .img3,
 .img4,
 .img5,
-.img6 {
+.img6,
+/* recently played */
+.img7,
+.img8,
+/* artisti piu popolari */
+.img9,
+.img10 {
   display: inline-block;
+  vertical-align: top;
   margin-left: 10px;
   width: 200px;
 }
-.recently-played img {
+.recently-played img,
+.created-for img,
+.recent-artists img {
   width: 200px;
   margin-top: 20px;
+}
+
+.img9 img,
+.img10 img {
+  border-radius: 100px;
+}
+
+.img9,
+.img10 {
+  text-align: center;
 }
 
 #music-player {
@@ -263,4 +301,128 @@ main::after {
   background-color: #282828;
   bottom: 0;
   left: 0;
+}
+
+.now-playing {
+  width: 400px;
+  height: 100%;
+  position: relative;
+}
+
+.now-playing img {
+  width: 60px;
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translate(-0, -50%);
+  margin-left: 20px;
+}
+
+.bottom-left-box {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 40px;
+}
+
+.now-playing i {
+  margin-left: 20px;
+}
+
+.fa-heart-o,
+.fa-folder-o {
+  color: gray;
+}
+
+.player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.player i {
+  color: white;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bottom-section {
+  margin-top: 10px;
+}
+
+.bottom-section p {
+  color: gray;
+  display: inline;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bottom-section span:first-of-type {
+   display: inline-block;
+   width: 300px; /*or whatever width you want the effect of <hr>*/
+   border-top: 5px solid #5A5A5A;
+   border-radius: 50px;
+   vertical-align: middle;
+   position: absolute;
+   left: 0;
+}
+
+.span {
+  width: 300px;
+  display: inline-block;
+  height: 5px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.bottom-section span:last-of-type {
+  display: inline-block;
+  width: 150px; /*or whatever width you want the effect of <hr>*/
+  border-top: 5px solid white;
+  border-radius: 50px;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-0, -50%);
+  text-align: right;
+  color: white;
+  margin-right: 20px;
+}
+
+.controls span:first-of-type {
+  display: inline-block;
+  width: 150px; /*or whatever width you want the effect of <hr>*/
+  border-top: 5px solid gray;
+  border-radius: 50px;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+}
+
+.controls .span {
+  width: 150px;
+}
+
+.controls span:last-of-type {
+  display: inline-block;
+  width: 100px; /*or whatever width you want the effect of <hr>*/
+  border-top: 5px solid white;
+  border-radius: 50px;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+}
+
+.controls i {
+  margin-left: 10px;
+  margin-right: 10px;
 }
