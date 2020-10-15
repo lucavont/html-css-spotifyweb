@@ -41,6 +41,10 @@ main::after {
   height: 80px;
 }
 
+.sidebar-logo img:nth-child(2) {
+  display: none;
+}
+
 .sidebar-logo img {
   width: 150px;
   margin-left: 20px;
@@ -122,7 +126,7 @@ main::after {
 
 .sidebar-bottom img {
   display: inline;
-  width: 15px;
+  width: 20px;
   vertical-align: middle;
 }
 
@@ -295,74 +299,59 @@ main::after {
 }
 
 #music-player {
-  width: 100%;
+  width: 100vw;
   height: 100px;
   position: fixed;
   background-color: #282828;
   bottom: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .now-playing {
-  width: 400px;
-  height: 100%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.now-playing h4 {
+  font-size: 14px;
+}
+
+.now-playing p {
+  font-size: 10px;
 }
 
 .now-playing img {
   width: 60px;
-  position: relative;
-  top: 50%;
-  left: 0;
-  transform: translate(-0, -50%);
-  margin-left: 20px;
 }
 
 .bottom-left-box {
   display: inline-block;
-  vertical-align: middle;
-  padding-right: 40px;
-}
-
-.now-playing i {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .fa-heart-o,
 .fa-folder-o {
   color: gray;
-}
-
-.player {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.player i {
-  color: white;
-  vertical-align: middle;
   margin-left: 10px;
-  margin-right: 10px;
-}
-
-.bottom-section {
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bottom-section p {
   color: gray;
-  display: inline;
+  display: inline-block;
   font-size: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .bottom-section span:first-of-type {
    display: inline-block;
-   width: 300px; /*or whatever width you want the effect of <hr>*/
+   width: 300px;
    border-top: 5px solid #5A5A5A;
    border-radius: 50px;
    vertical-align: middle;
@@ -380,27 +369,29 @@ main::after {
 
 .bottom-section span:last-of-type {
   display: inline-block;
-  width: 150px; /*or whatever width you want the effect of <hr>*/
+  width: 150px;
   border-top: 5px solid white;
   border-radius: 50px;
   vertical-align: middle;
   position: absolute;
   left: 0;
 }
+.upper-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
-.controls {
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  transform: translate(-0, -50%);
-  text-align: right;
+.player i {
   color: white;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .controls span:first-of-type {
   display: inline-block;
-  width: 150px; /*or whatever width you want the effect of <hr>*/
+  width: 150px;
   border-top: 5px solid gray;
   border-radius: 50px;
   vertical-align: middle;
@@ -414,7 +405,7 @@ main::after {
 
 .controls span:last-of-type {
   display: inline-block;
-  width: 100px; /*or whatever width you want the effect of <hr>*/
+  width: 100px;
   border-top: 5px solid white;
   border-radius: 50px;
   vertical-align: middle;
@@ -422,7 +413,59 @@ main::after {
   left: 0;
 }
 
+.controls {
+  color: white;
+}
+
 .controls i {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 50px;
+  }
+  .sidebar-playlist,
+  .playlist-list {
+    display: none;
+  }
+  #scrolling-content,
+  .upgrade {
+    width: calc(100% - 50px);
+  }
+  .sidebar-menu p,
+  .sidebar-bottom p,
+  .sidebar-bottom h3,
+  .sidebar-bottom hr {
+    display: none;
+  }
+  .sidebar-menu img,
+  .sidebar-bottom,
+  .sidebar-logo img {
+    margin-left: 10px;
+  }
+  .sidebar-logo img:first-child {
+    display: none;
+  }
+  .sidebar-logo img:nth-child(2) {
+    display: block;
+    width: 30px;
+  }
+  .navigation h4 {
+    margin-top: 20px;
+  }
+  .navigation {
+    margin-top: 80px;
+  }
+  .home {
+    border-left: none;
+  }
+  .home img {
+    color: lightgray;
+  }
+  .download img {
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
 }
