@@ -169,6 +169,39 @@ main::after {
   float: right;
 }
 
+.overlay {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 20px;
+  display: none;
+}
+
+.overlay i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+}
+
+.img1:hover .overlay,
+.img2:hover .overlay,
+.img3:hover .overlay,
+.img4:hover .overlay,
+.img5:hover .overlay,
+.img6:hover .overlay,
+.img7:hover .overlay,
+.img8:hover .overlay,
+.img9:hover .overlay,
+.img10:hover .overlay {
+  display: inline;
+  color: white;
+}
+
 .upgrade {
   display: flex;
   justify-content: flex-end;
@@ -280,6 +313,7 @@ main::after {
   vertical-align: top;
   margin-left: 10px;
   width: 200px;
+  position: relative;
 }
 .recently-played img,
 .created-for img,
@@ -422,7 +456,7 @@ main::after {
   margin-right: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 485px) {
   #sidebar {
     width: 50px;
   }
@@ -467,5 +501,63 @@ main::after {
   .download img {
     margin-bottom: 10px;
     margin-left: 3px;
+  }
+  .bottom-section span:first-of-type {
+     display: inline-block;
+     width: 100%;
+     border-top: 5px solid #5A5A5A;
+     border-radius: 50px;
+     vertical-align: middle;
+     position: absolute;
+     left: 0;
+  }
+
+  .now-playing {
+    width: 150px;
+  }
+
+  .span {
+    width: 70%;
+    display: inline-block;
+    height: 5px;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .bottom-section span:last-of-type {
+    display: inline-block;
+    width: 70%;
+    border-top: 5px solid white;
+    border-radius: 50px;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+  }
+  .controls span:first-of-type {
+    display: inline-block;
+    width: 100%;
+    border-top: 5px solid gray;
+    border-radius: 50px;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+  }
+
+  .controls .span {
+    width: 100%;
+  }
+
+  .controls span:last-of-type {
+    display: inline-block;
+    width: 70%;
+    border-top: 5px solid white;
+    border-radius: 50px;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+  }
+  .controls i {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 }
